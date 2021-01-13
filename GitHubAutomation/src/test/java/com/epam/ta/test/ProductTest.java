@@ -56,7 +56,7 @@ public class ProductTest extends CommonConditions {
     @Test
     public void ChooseMoreUnitsOfTheSameProduct()
     {
-        Product product = ProductCreator.withAllProperty("third");
+        Product product = ProductCreator.withAllProperty("first");
         int countProduct = new MainPage(driver)
                 .openPage()
                 .searchForProducts(product.getProductName())
@@ -70,7 +70,7 @@ public class ProductTest extends CommonConditions {
     @Test
     public void removeOneUnitOfProduct()
     {
-        Product product = ProductCreator.withAllProperty("third");
+        Product product = ProductCreator.withAllProperty("first");
         BasketPage basketPage =new MainPage(driver)
                 .openPage()
                 .searchForProducts(product.getProductName())
@@ -97,7 +97,7 @@ public class ProductTest extends CommonConditions {
     @Test
     public void AddItemToTheListOfPendingItems()
     {
-        Product product = ProductCreator.withAllProperty("third");
+        Product product = ProductCreator.withAllProperty("first");
         CatalogPage catalogIsType = new MainPage(driver)
                 .openPage()
                 .searchForProducts(product.getProductName())
