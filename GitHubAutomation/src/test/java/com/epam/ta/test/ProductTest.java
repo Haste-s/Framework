@@ -80,7 +80,7 @@ public class ProductTest extends CommonConditions {
         int countProductAfterDeletion = basketPage.removeTheNumberOfProduct(1,1);
         Assert.assertEquals(countProductBeforeDeletion,countProductAfterDeletion+1);
     }
-   // @Test
+    @Test
     public void InputInvalidPromoCode()
     {
         User user = UserCreator.withCredentialsFromProperty();
