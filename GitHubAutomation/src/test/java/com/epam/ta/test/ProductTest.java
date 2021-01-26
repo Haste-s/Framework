@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 public class ProductTest extends CommonConditions {
     private final Logger logger = LogManager.getRootLogger();
 
-    @Test
+   // @Test
     public void CorrectDisplayingPriceSumOfTwoItems()
     {
         Product firstProduct = ProductCreator.withEmptyProductSize("first");
@@ -38,7 +38,7 @@ public class ProductTest extends CommonConditions {
         Assert.assertEquals(totalCost, PriceFirstProduct + PriceSecondProduct);
     }
 
-    @Test
+    //@Test
     public void PurchaseWithOutOfProduct()
     {
         Product product = ProductCreator.withEmptyProductSize("first");
@@ -53,7 +53,7 @@ public class ProductTest extends CommonConditions {
         Assert.assertFalse(opportunityToPlaceAnOrder);
     }
 
-    @Test
+  //  @Test
     public void ChooseMoreUnitsOfTheSameProduct()
     {
         Product product = ProductCreator.withAllProperty("first");
@@ -67,7 +67,7 @@ public class ProductTest extends CommonConditions {
         Assert.assertEquals(countProduct, product.getCount());
     }
 
-    @Test
+    //@Test
     public void removeOneUnitOfProduct()
     {
         Product product = ProductCreator.withAllProperty("first");
@@ -80,7 +80,7 @@ public class ProductTest extends CommonConditions {
         int countProductAfterDeletion = basketPage.removeTheNumberOfProduct(1,1);
         Assert.assertEquals(countProductBeforeDeletion,countProductAfterDeletion+1);
     }
-    @Test
+   // @Test
     public void InputInvalidPromoCode()
     {
         User user = UserCreator.withCredentialsFromProperty();
@@ -94,7 +94,7 @@ public class ProductTest extends CommonConditions {
 
         Assert.assertEquals(errorMessag,user.getCoupon()+" - купон не найден");
     }
-    @Test
+   // @Test
     public void AddItemToTheListOfPendingItems()
     {
         Product product = ProductCreator.withAllProperty("first");
