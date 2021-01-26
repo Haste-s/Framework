@@ -54,7 +54,7 @@ public class CatalogPage extends AbstractPage{
     public CatalogPage addProductIntoBasket(String nameProduct)
     {
         driver.findElement(By.linkText(nameProduct)).click();
-        addButtonProduct.click();
+        waitWebElementToBeClickable(addButtonProduct).click();
         logger.info("Probuct "+nameProduct+" added to basket");
         return this;
     }
